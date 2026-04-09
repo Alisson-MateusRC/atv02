@@ -1,4 +1,120 @@
-.App {
-  font-family: sans-serif;
+ody {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte e fundo */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #1e1e2f;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* SEÇÕES */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #1e1e2f;
+}
+
+/* PROJETOS */
+#lista-projetos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  background: #1e1e2f;
+  color: #aaa;
   text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #lista-projetos {
+    justify-content: center;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.8s ease;
 }
